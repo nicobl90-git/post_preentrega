@@ -51,6 +51,7 @@ class LoginPage:
     #Puedo definir un método para que abra el navegador con la URL
     def open(self):
         self.driver.get(self.URL) #el driver abre la URL como parámetro que definí antes
+        return self
 
     def login(self, username, password):
         self.wait.until(
