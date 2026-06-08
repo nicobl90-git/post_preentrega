@@ -25,8 +25,29 @@ class InventoryPage:
         """Obtiene el título de la página de inventario."""
         return self.driver.find_element(*self._TITLE).text
     
+    def agregar_producto_por_nombre(self, nombre_producto):
+        """
+        Agrega un producto específico al carrito buscándolo por nombre
+        """
+        productos = self.driver.find_elements(*self._PRODUCTS)
+        
+        for producto in productos:
+            nombre_elemento = producto.find_element(By.CLASS_NAME, "inventory_item_name")
+            if nombre_elemento.text == nombre_producto:
+                boton_agregar = producto.find_element(By.TAG_NAME, "button")
+                boton_agregar.click()
+                return True
+        
+        raise Exception(f"No se encontró el producto: {nombre_producto}")
+
     def obtener_productos(self):
         #Obtiene la lista de productos disponibles.
         return self.driver.find_elements(*self._PRODUCTS)
     
-    
+    def obtener_contador_carrito(self):
+        #Obtiene el número de productos en el carrito.
+        try:
+            badge = self.driver.find_element(*self._CART_BADGE)
+            return int(badge.text)
+        except:
+            return 0
