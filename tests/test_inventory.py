@@ -3,7 +3,8 @@ from pages.inventory import InventoryPage
 
 
 def test_inventory(driver):
-    LoginPage(driver).open().login("standard_user", "secret_sauce") #Llamo al método de login para iniciar sesión antes de probar el inventario
+    LoginPage(driver).open().completar_usuario("standard_user").completar_clave("secret_sauce").enviar() #Llamo al método de login para iniciar sesión antes de probar el inventario    
+    
     
     inventory_page = InventoryPage(driver) #Corroboro el título de la página
     titulo = inventory_page.obtener_titulo()
