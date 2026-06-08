@@ -15,3 +15,8 @@ CLASE 10: MANEJO DE DATOS DE PRUEBA
     --Modifico el archivo Login para que tome los datos csv (tanto Page como Test)
     --Modifico el metodo Login de los archivos Inventory y Cart para que corran bien
     --Pytest corre bien el Login con los usuarios csv y los otros dos tests
+    --Creo el archivo json para productos
+    --Separo casos de Login y Cart según usuarios (USERS y csv) y productos por json o por hardcode
+    --Elimino los tests de Faker por ahora
+    --Genero reporte html con el comando pytest --html=reporte.html --self-contained-html
+    
