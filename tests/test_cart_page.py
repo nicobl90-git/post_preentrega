@@ -3,7 +3,7 @@ from pages.cart_page import CartPage
 
 
 def test_cart_page(driver):
-    LoginPage(driver).open().login("standard_user", "secret_sauce") #Llamo al método de login para iniciar sesión antes de probar el inventario
+    LoginPage(driver).open().completar_usuario("standard_user").completar_clave("secret_sauce").enviar() #Llamo al método de login para iniciar sesión antes de probar el inventario    
     
     cart_page = CartPage(driver) #Instancio la clase CartPage para probar sus métodos
     cart_page.agregar_primer_producto() #Agrego el primer producto al carrito
@@ -15,4 +15,4 @@ def test_cart_page(driver):
 
     cart_page.hacer_logout() #Hago logout para cerrar sesión al finalizar el test
 
-    
+
