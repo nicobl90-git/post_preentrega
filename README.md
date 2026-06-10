@@ -20,3 +20,9 @@ CLASE 10: MANEJO DE DATOS DE PRUEBA
     --Elimino los tests de Faker por ahora
     --Genero reporte html con el comando pytest --html=reporte.html --self-contained-html
     
+
+CLASE 11: Automatización de pruebas de API (1)
+-Cambios hechos:
+    --Creo la rama feature/requests
+    --Creo los tests básicos, get, post y login
+    --Todos corren bien con pyest/python3
