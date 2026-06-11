@@ -12,6 +12,7 @@ import pytest
 LOGIN_URL = 'https://reqres.in/api/login'
 API_KEY = 'pro_687a35cc99c02c28f522221f8db090b1f52aceb1bd7134330b4649d5fa579c38'
 
+@pytest.mark.api 
 @pytest.mark.parametrize("email, password, expected_status", [
     ('eve.holt@reqres.in', 'cityslicka', 200)
 ])
@@ -24,6 +25,7 @@ def test_login(email, password, expected_status):
     body = resp.json()
     assert 'token' in body
 
+@pytest.mark.api
 @pytest.mark.parametrize("email, password, expected_status", [
     ('eve.holt@reqres.in', '', 400)
 ])

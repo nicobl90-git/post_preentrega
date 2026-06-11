@@ -26,3 +26,8 @@ CLASE 11: Automatización de pruebas de API (1)
     --Creo la rama feature/requests
     --Creo los tests básicos, get, post y login
     --Todos corren bien con pyest/python3
+    --Agrego markers a los tres tests y al archivo pytest.ini
+    --Corro todos los comandos satisfactoriamente
+        pytest -m api -v
+        pytest tests_api/ -v
+        pytest tests/ tests_api/ --html=reporte_completo.html
