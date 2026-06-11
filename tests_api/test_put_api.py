@@ -2,7 +2,7 @@ import requests
 import pytest
 import time
 
-URL = 'https://jsonplaceholder.typicode.com/posts/1'
+# URL = 'https://jsonplaceholder.typicode.com/posts/1'
 
 payload = {
  'id': 1,
@@ -13,7 +13,14 @@ payload = {
 
 
 @pytest.mark.api
-def test_put_post():
+def test_put_post(post_by_id_url):
+ URL = post_by_id_url(1)  # Usamos el fixture para obtener la URL del post con ID 1
+ payload = {
+    'id': 1, 
+    'title': 'Automation Testing Guide', 
+    'body': 'Guía completa de testing automatizado', 
+    'userId': 1
+  }
  start = time.time()
  r = requests.put(URL, json=payload)
  assert r.status_code == 200

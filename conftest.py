@@ -9,3 +9,15 @@ def driver():
     driver = webdriver.Chrome(service=service)
     yield driver
     driver.quit()
+
+BASE = 'https://jsonplaceholder.typicode.com'
+
+@pytest.fixture(scope='module')
+def posts_url():
+  return f"{BASE}/posts"
+
+@pytest.fixture(scope='module')
+def post_by_id_url():
+  def _get_url(post_id):
+    return f"{BASE}/posts/{post_id}"
+  return _get_url

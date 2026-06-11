@@ -31,3 +31,8 @@ CLASE 11: Automatización de pruebas de API (1)
         pytest -m api -v
         pytest tests_api/ -v
         pytest tests/ tests_api/ --html=reporte_completo.html
+
+CLASE 12: Automatización de pruebas de API (2)
+-Cambios hechos:
+    --Refactorizo los tests de PUT, PATCH y DELETE para que la URL se pase como fixture
+    --Fixture colocado en el archivo conftest.py
