@@ -9,6 +9,7 @@ Comprueba 201 y que createdAt incluya el año actual
 import requests
 import pytest
 from faker import Faker
+from utils.loggers import logger
 
 fake = Faker('es_ES')
 

@@ -1,4 +1,5 @@
 import requests
+from utils.loggers import logger
 
 """
 CREATE_URL = 'https://jsonplaceholder.typicode.com/posts'

@@ -1,6 +1,7 @@
 import requests
 import pytest
 import time
+from utils.loggers import logger
 
 # URL = 'https://jsonplaceholder.typicode.com/posts/1'
 

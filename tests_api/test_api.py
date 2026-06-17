@@ -1,4 +1,5 @@
 import requests
+from utils.loggers import logger
 
 resp = requests.get('https://api.github.com/')
 print(resp.status_code) # 200 = OK
