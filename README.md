@@ -36,3 +36,13 @@ CLASE 12: Automatización de pruebas de API (2)
 -Cambios hechos:
     --Refactorizo los tests de PUT, PATCH y DELETE para que la URL se pase como fixture
     --Fixture colocado en el archivo conftest.py
+
+CLASE 13: Reports y logs
+-Cambios realizados:
+    --Agrego las carpetas y elementos para una mejor configuración de reportes y logs
+
+CLASE 14: BBD, Behave y Gherkin
+-Cambios hechos:
+    --Creo la rama feature/behave_gherkin
+    --Instalo behave y creo el archivo behave.ini
+    
